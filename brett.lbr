@@ -36,7 +36,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="60" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
@@ -618,14 +618,19 @@ Holes are offset 0.005" to hold pins in place during soldering.
 <text x="1.778" y="4.826" size="1.4224" layer="25">&gt;VALUE</text>
 </package>
 <package name="4-WFBGA_CENTERED">
-<smd name="TAO" x="-0.1968" y="-0.1968" dx="0.24" dy="0.24" layer="1" roundness="100"/>
-<smd name="GND" x="-0.1968" y="0.2032" dx="0.24" dy="0.24" layer="1" roundness="100"/>
-<smd name="VDD" x="0.2032" y="0.2032" dx="0.24" dy="0.24" layer="1" roundness="100"/>
-<smd name="T_ON" x="0.2032" y="-0.1968" dx="0.24" dy="0.24" layer="1" roundness="100"/>
-<wire x1="-0.4968" y1="-0.4968" x2="0.5032" y2="-0.4968" width="0.127" layer="51"/>
-<wire x1="0.5032" y1="-0.4968" x2="0.5032" y2="0.5032" width="0.127" layer="51"/>
-<wire x1="0.5032" y1="0.5032" x2="-0.4968" y2="0.5032" width="0.127" layer="51"/>
-<wire x1="-0.4968" y1="0.5032" x2="-0.4968" y2="-0.4968" width="0.127" layer="51"/>
+<smd name="TAO" x="-0.2" y="-0.2" dx="0.36" dy="0.36" layer="1" roundness="100" stop="no" thermals="no" cream="no"/>
+<smd name="GND" x="-0.2" y="0.2" dx="0.36" dy="0.36" layer="1" roundness="100" stop="no" thermals="no" cream="no"/>
+<smd name="VDD" x="0.2" y="0.2" dx="0.36" dy="0.36" layer="1" roundness="100" stop="no" thermals="no" cream="no"/>
+<smd name="T_ON" x="0.2" y="-0.2" dx="0.36" dy="0.36" layer="1" roundness="100" stop="no" thermals="no" cream="no"/>
+<wire x1="-0.4968" y1="-0.4968" x2="0.5032" y2="-0.4968" width="0.127" layer="21"/>
+<wire x1="0.5032" y1="-0.4968" x2="0.5032" y2="0.5032" width="0.127" layer="21"/>
+<wire x1="0.5032" y1="0.5032" x2="-0.4968" y2="0.5032" width="0.127" layer="21"/>
+<wire x1="-0.4968" y1="0.5032" x2="-0.4968" y2="-0.4968" width="0.127" layer="21"/>
+<circle x="-0.2" y="0.2" radius="0" width="0.24" layer="29"/>
+<circle x="0.2" y="0.2" radius="0" width="0.24" layer="29"/>
+<circle x="-0.2" y="-0.2" radius="0" width="0.24" layer="29"/>
+<circle x="0.2" y="-0.2" radius="0" width="0.24" layer="29"/>
+<circle x="-0.65" y="0.45" radius="0.1" width="0.127" layer="21"/>
 </package>
 <package name="JMP_ON_SMD">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -642,6 +647,80 @@ Holes are offset 0.005" to hold pins in place during soldering.
 <rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
 <rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
 <smd name="P$1" x="0" y="0" dx="1.27" dy="0.254" layer="1"/>
+</package>
+<package name="TRINKET_M0_SOCKET">
+<pad name="RST" x="-8.89" y="-1.27" drill="1.016"/>
+<pad name="3" x="-8.89" y="1.27" drill="1.016"/>
+<pad name="4" x="-8.89" y="3.81" drill="1.016"/>
+<pad name="GND" x="-8.89" y="6.35" drill="1.016"/>
+<pad name="USB" x="3.81" y="8.89" drill="1.016"/>
+<pad name="BAT" x="-8.89" y="8.89" drill="1.016"/>
+<pad name="3V" x="3.81" y="-1.27" drill="1.016"/>
+<pad name="2" x="3.81" y="1.27" drill="1.016"/>
+<pad name="1" x="3.81" y="3.81" drill="1.016"/>
+<pad name="0" x="3.81" y="6.35" drill="1.016"/>
+<wire x1="-10.16" y1="16.51" x2="-10.16" y2="-10.16" width="0.127" layer="51"/>
+<wire x1="5.08" y1="16.51" x2="5.08" y2="-10.16" width="0.127" layer="51"/>
+<wire x1="5.08" y1="-10.16" x2="-10.16" y2="-10.16" width="0.127" layer="51"/>
+<wire x1="-10.16" y1="16.51" x2="5.08" y2="16.51" width="0.127" layer="51"/>
+<text x="-8.89" y="-6.35" size="1.27" layer="25">&gt;NAME</text>
+<text x="-8.89" y="-8.89" size="1.27" layer="25">&gt;VALUE</text>
+<text x="-4.064" y="13.208" size="1.27" layer="25">USB</text>
+<wire x1="-5.08" y1="16.129" x2="-5.08" y2="10.16" width="0.127" layer="25" style="shortdash"/>
+<wire x1="-5.08" y1="10.16" x2="0" y2="10.16" width="0.127" layer="25" style="shortdash"/>
+<wire x1="0" y1="10.16" x2="0" y2="16.129" width="0.127" layer="25" style="shortdash"/>
+<wire x1="0" y1="16.129" x2="-5.08" y2="16.129" width="0.127" layer="25" style="shortdash"/>
+</package>
+<package name="VSSOP-8">
+<smd name="5" x="2.25" y="-0.9" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="6" x="2.25" y="-0.25" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="7" x="2.25" y="0.4" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="8" x="2.25" y="1.05" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="1" x="-2.15" y="1.05" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="2" x="-2.15" y="0.4" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="3" x="-2.15" y="-0.25" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<smd name="4" x="-2.15" y="-0.9" dx="0.45" dy="1.45" layer="1" rot="R90"/>
+<wire x1="-1.846" y1="1.9" x2="1.919" y2="1.9" width="0.127" layer="25"/>
+<wire x1="1.919" y1="1.9" x2="1.919" y2="1.5" width="0.127" layer="25"/>
+<wire x1="-1.846" y1="-1.4" x2="-1.846" y2="-1.9" width="0.127" layer="25"/>
+<wire x1="-1.846" y1="-1.9" x2="1.919" y2="-1.9" width="0.127" layer="25"/>
+<wire x1="1.919" y1="-1.9" x2="1.919" y2="-1.4" width="0.127" layer="25"/>
+<wire x1="-1.846" y1="1.5" x2="-1.846" y2="1.9" width="0.127" layer="25"/>
+<text x="-2.4" y="2.3" size="1.016" layer="25">&gt;NAME</text>
+<text x="-2.8" y="-3.2" size="1.016" layer="27">&gt;VALUE</text>
+<circle x="-0.762" y="1.27" radius="0.283978125" width="0.127" layer="23"/>
+</package>
+<package name="REF3212">
+<smd name="P$1" x="-0.9" y="-1.45" dx="0.6" dy="1.05" layer="1"/>
+<smd name="P$2" x="0.05" y="-1.45" dx="0.6" dy="1.05" layer="1"/>
+<smd name="P$3" x="1" y="-1.45" dx="0.6" dy="1.05" layer="1"/>
+<smd name="P$4" x="1" y="1.25" dx="0.6" dy="1.05" layer="1"/>
+<smd name="P$5" x="0.05" y="1.25" dx="0.6" dy="1.05" layer="1"/>
+<smd name="P$6" x="-0.9" y="1.25" dx="0.6" dy="1.05" layer="1"/>
+<wire x1="-1.8" y1="1.2" x2="-1.8" y2="-1.4" width="0.127" layer="27"/>
+<wire x1="-1.8" y1="-1.4" x2="-1.4" y2="-1.4" width="0.127" layer="27"/>
+<wire x1="1.6" y1="1.2" x2="2" y2="1.2" width="0.127" layer="27"/>
+<wire x1="2" y1="1.2" x2="2" y2="-1.4" width="0.127" layer="27"/>
+<wire x1="2" y1="-1.4" x2="1.6" y2="-1.4" width="0.127" layer="27"/>
+<wire x1="-1.4" y1="1.2" x2="-1.8" y2="1.2" width="0.127" layer="27"/>
+<text x="-2.1" y="-2.5" size="1.016" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.3" y="-2.7" size="1.016" layer="25" rot="R90">&gt;VALUE</text>
+<circle x="-1.27" y="-0.381" radius="0.254" width="0.127" layer="27"/>
+</package>
+<package name="JMP_OFF_SMD">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-2.1082" y="0" dx="3.556" dy="1.1" layer="1"/>
+<smd name="2" x="2.1082" y="0" dx="3.556" dy="1.1" layer="1"/>
+<text x="-3.175" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.175" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -1056,6 +1135,58 @@ ROW</text>
 <text x="-3.556" y="-2.54" size="1.27" layer="96">&gt;VALUE</text>
 <pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
 <pin name="P$2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+</symbol>
+<symbol name="TRINKET_M0">
+<wire x1="17.78" y1="25.4" x2="5.08" y2="25.4" width="0.254" layer="94"/>
+<wire x1="5.08" y1="25.4" x2="0" y2="20.32" width="0.254" layer="94" curve="90"/>
+<wire x1="0" y1="20.32" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94" curve="90"/>
+<wire x1="5.08" y1="-2.54" x2="17.78" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-2.54" x2="22.86" y2="2.54" width="0.254" layer="94" curve="90"/>
+<wire x1="22.86" y1="2.54" x2="22.86" y2="20.32" width="0.254" layer="94"/>
+<wire x1="22.86" y1="20.32" x2="17.78" y2="25.4" width="0.254" layer="94" curve="90"/>
+<pin name="BAT" x="-5.08" y="15.24" length="middle"/>
+<pin name="GND" x="-5.08" y="12.7" length="middle"/>
+<pin name="4" x="-5.08" y="10.16" length="middle"/>
+<pin name="3" x="-5.08" y="7.62" length="middle"/>
+<pin name="RST" x="-5.08" y="5.08" length="middle"/>
+<pin name="3V" x="27.94" y="5.08" length="middle" rot="R180"/>
+<pin name="2" x="27.94" y="7.62" length="middle" rot="R180"/>
+<pin name="1~" x="27.94" y="10.16" length="middle" rot="R180"/>
+<pin name="0" x="27.94" y="12.7" length="middle" rot="R180"/>
+<pin name="USB" x="27.94" y="15.24" length="middle" rot="R180"/>
+<text x="2.54" y="20.32" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="17.78" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="INA827">
+<wire x1="-22.86" y1="17.78" x2="-22.86" y2="-7.62" width="0.6096" layer="94"/>
+<wire x1="-22.86" y1="-7.62" x2="5.08" y2="-7.62" width="0.6096" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="17.78" width="0.6096" layer="94"/>
+<wire x1="5.08" y1="17.78" x2="-22.86" y2="17.78" width="0.6096" layer="94"/>
+<pin name="RG+" x="-27.94" y="12.7" length="middle"/>
+<pin name="V_IN-" x="-27.94" y="7.62" length="middle"/>
+<pin name="V_IN+" x="-27.94" y="2.54" length="middle"/>
+<pin name="V-" x="-27.94" y="-2.54" length="middle"/>
+<pin name="REF" x="10.16" y="-2.54" length="middle" rot="R180"/>
+<pin name="V_OUT" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="V+" x="10.16" y="7.62" length="middle" rot="R180"/>
+<pin name="RG-" x="10.16" y="12.7" length="middle" rot="R180"/>
+<text x="-25.4" y="20.32" size="3.81" layer="95">&gt;NAME</text>
+<text x="-25.4" y="-12.7" size="3.81" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="REF3212">
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="12.7" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<pin name="GND_F" x="-12.7" y="5.08" length="middle"/>
+<pin name="GND_S" x="-12.7" y="2.54" length="middle"/>
+<pin name="EN" x="-12.7" y="0" length="middle"/>
+<pin name="IN" x="17.78" y="0" length="middle" rot="R180"/>
+<pin name="OUT_G" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="OUT_F" x="17.78" y="5.08" length="middle" rot="R180"/>
+<text x="-7.62" y="7.62" size="2.54" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-5.08" size="2.54" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1528,6 +1659,81 @@ ROW</text>
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 <connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="OFF" package="JMP_OFF_SMD">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TRINKET_M0_SOCKET">
+<gates>
+<gate name="G$1" symbol="TRINKET_M0" x="-10.16" y="-7.62"/>
+</gates>
+<devices>
+<device name="" package="TRINKET_M0_SOCKET">
+<connects>
+<connect gate="G$1" pin="0" pad="0"/>
+<connect gate="G$1" pin="1~" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="3V" pad="3V"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="BAT" pad="BAT"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="RST" pad="RST"/>
+<connect gate="G$1" pin="USB" pad="USB"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="INA827">
+<gates>
+<gate name="G$1" symbol="INA827" x="12.7" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="VSSOP-8">
+<connects>
+<connect gate="G$1" pin="REF" pad="5"/>
+<connect gate="G$1" pin="RG+" pad="1"/>
+<connect gate="G$1" pin="RG-" pad="8"/>
+<connect gate="G$1" pin="V+" pad="7"/>
+<connect gate="G$1" pin="V-" pad="4"/>
+<connect gate="G$1" pin="V_IN+" pad="3"/>
+<connect gate="G$1" pin="V_IN-" pad="2"/>
+<connect gate="G$1" pin="V_OUT" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="REF3212">
+<gates>
+<gate name="G$1" symbol="REF3212" x="-2.54" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="REF3212">
+<connects>
+<connect gate="G$1" pin="EN" pad="P$3"/>
+<connect gate="G$1" pin="GND_F" pad="P$1"/>
+<connect gate="G$1" pin="GND_S" pad="P$2"/>
+<connect gate="G$1" pin="IN" pad="P$4"/>
+<connect gate="G$1" pin="OUT_F" pad="P$6"/>
+<connect gate="G$1" pin="OUT_G" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
